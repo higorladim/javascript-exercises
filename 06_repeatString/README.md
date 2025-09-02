@@ -8,7 +8,7 @@ repeatString('hey', 3) // returns 'heyheyhey'
 
 This function will take two arguments, `string` and `num`.
 
-Use loops to implement `repeatString` rather than using the builtin `String.prototype.repeat` which has the same behaviour.
+Use loops to implement `repeatString` rather than using the builtin `String.prototype.repeat` which has the same behavior.
 
 *Note:* The exercises after this one will not have arguments provided as this one does - you will need to provide them yourself from now on. So read each exercise's README carefully to see what kinds of arguments will be expected.
 
