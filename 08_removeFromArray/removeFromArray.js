@@ -1,21 +1,30 @@
-const removeFromArray = function(array, ...theArgs) {
+const removeFromArray = function (array, ...theArgs) {
     console.log("theArgs: ", theArgs);
-    let newArray;
-    for (const arg of theArgs){   
+    let newArray = array;
 
-        console.log("arg: ", arg);
-        console.log("array: ", array);
-        
-        if (arg > -1){
-        index = array.indexOf(arg);
-        console.log("index: ", index);
-        array.splice(index, 1);
+
+    console.log("for started");
+    for (let arg of theArgs) {
+
+        if (newArray.includes(arg)) {
+            console.log("Rodou o for");
+
+            index = array.indexOf(arg);
+            newArray = newArray.toSpliced(index, 1);
+
+
+            while (newArray.includes(arg)) {
+                index = newArray.indexOf(arg);
+                newArray = newArray.toSpliced(index, 1);
+            }
+            
+        } else {
+            console.log("not in the for")
         }
     }
-    
-    console.log("array: ", array);
-    return array;
-    
+
+    console.log("fim do for", newArray);
+    return newArray;
 };
 
 // Do not edit below this line
