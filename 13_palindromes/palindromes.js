@@ -1,8 +1,13 @@
 const palindromes = function (string) {
-    let stringReversed = reverse(string);
-    console.log("stringReversed: ", stringReversed);
+    let stringClean = string.replace(/[^\w\s\']|_/g, "");
+    stringClean = stringClean.replace(/\s+/g, "");
 
-    if (stringReversed === string){
+    let stringReversed = reverse(stringClean);
+
+    stringReversed = stringReversed.toUpperCase();
+    stringClean = stringClean.toUpperCase();
+
+    if (stringReversed === stringClean){
         return true;
     } else {
         return false;
